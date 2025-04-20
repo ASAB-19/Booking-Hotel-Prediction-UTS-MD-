@@ -1,5 +1,6 @@
+python_version == 3.10
 streamlit
 pandas
 numpy
 scikit-learn
-xgboost
+xgboost==1.7.6
