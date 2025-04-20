@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import pickle
 import numpy as np
-from inference import predict_booking_status  # fungsi dari file inference.py
+from inference import predict_booking_status  
 
 st.title("Booking Hotel Prediction")
 
@@ -24,7 +24,7 @@ type_of_meal_plan = st.selectbox("Paket makanan", ["Meal Plan 1", "Meal Plan 2",
 required_car_parking_space = st.selectbox("Butuh parkir?", [0, 1])
 room_type_reserved = st.selectbox("Jenis kamar", ['Room_Type 1', 'Room_Type 2', 'Room_Type 3', 'Room_Type 4'])
 lead_time = st.number_input("Lead time (hari)", min_value=0, value=30)
-arrival_year = st.selectbox("Tahun kedatangan", [2017])  # sesuaikan dengan data
+arrival_year = st.selectbox("Tahun kedatangan", [2017])  
 arrival_month = st.selectbox("Bulan kedatangan", list(range(1,13)))
 arrival_date = st.number_input("Tanggal kedatangan", min_value=1, max_value=31, value=1)
 market_segment_type = st.selectbox("Segment pasar", ['Online', 'Offline', 'Corporate', 'Complementary'])
