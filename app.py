@@ -11,15 +11,16 @@ import streamlit as st
 import pandas as pd
 import pickle
 
+st.set_page_config(page_title="Hotel Booking Prediction", layout="centered")
+st.title("Hotel Booking Cancellation Prediction")
+
+
 @st.cache_resource
 def load_model():
     with open("best_model_pipeline.pkl", "rb") as f:
         return pickle.load(f)
 
 model = load_model()
-
-st.set_page_config(page_title="Hotel Booking Prediction", layout="centered")
-st.title("Hotel Booking Cancellation Prediction")
 
 with st.form("booking_form"):
     no_of_adults = st.number_input("Number of Adults", min_value=0, value=2)
