@@ -44,8 +44,8 @@ class HotelBookingModel:
         print("Accuracy:", accuracy_score(y_test, y_pred))
 
     def save_model(self, output_path='best_model.pkl'):
-        with open(output_path, 'wb') as file:
-            pickle.dump(self.model, file)
+      with open(output_path, 'wb') as file:
+        pickle.dump({'model': self.model, 'encoder': self.encoder}, file)
 
 trainer = HotelBookingModel('Dataset_B_hotel.csv')
 trainer.load_data()
